@@ -16,7 +16,7 @@ module.exports = {
         'eslint-config-prettier',
         'prettier'
     ],
-    plugins: ['prettier'],
+    plugins: ['prettier', 'import'],
     settings: {
         react: {
             // Nói eslint-plugin-react tự động biết version của React.
@@ -27,7 +27,8 @@ module.exports = {
             node: {
                 paths: [path.resolve(__dirname, '')],
                 extensions: ['.js', '.jsx', '.ts', '.tsx']
-            }
+            },
+            typescript: {} // Là một tùy chọn cho plugin eslint-import-resolver-typescript, được sử dụng để giải quyết các import trong mã TypeScript.
         }
     },
     env: {

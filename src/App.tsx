@@ -1,11 +1,8 @@
-import AbsolutePathTest from '~/components/AbsolutePathTest'
-import '~/App.css'
+import useRouterElement from './router'
+
 function App() {
-    return (
-        <div className='App'>
-            <AbsolutePathTest />
-        </div>
-    )
+    const routerElements = useRouterElement()
+    return <div>{routerElements}</div>
 }
 
 export default App
